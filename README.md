@@ -33,9 +33,9 @@ Ce projet fournit une version améliorée du site de l'Association des Étudiant
       npm install framer-motion@latest --prefix 
    ```
 # Explications :
-# - framer-motion@latest : dernière version stable
-# - --prefix . : installation dans le dossier courant (client)
-# Permet d’animer cartes, boutons et sections
+ - framer-motion@latest : dernière version stable
+* --prefix . : installation dans le dossier courant (client)
+*Permet d’animer cartes, boutons et sections
 
 5. **Démarrer l'application React** :
 
