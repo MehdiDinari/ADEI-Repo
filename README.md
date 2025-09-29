@@ -28,7 +28,7 @@ Ce projet fournit une version améliorée du site de l'Association des Étudiant
    cd ../client
    npm install
    ```
-# 4. Installer Framer Motion pour les animations
+4. **Installer Framer Motion pour les animations** :
    ```bash
       npm install framer-motion@latest --prefix 
    ```
