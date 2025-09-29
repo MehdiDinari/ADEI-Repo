@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "Réunion générale des clubs",
+    "date": "2023-10-10",
+    "time": "14:00 - 16:00",
+    "location": "Amphi A, Campus Principal",
+    "category": "réunion",
+    "description": "Réunion trimestrielle de tous les clubs de l'école pour discuter des projets et événements à venir. Présence obligatoire pour au moins un représentant de chaque club.",
+    "image": "/api/placeholder/500/300"
+  },
+  {
+    "id": 2,
+    "title": "Tournoi inter-écoles de football",
+    "date": "2023-10-15",
+    "time": "09:00 - 18:00",
+    "location": "Terrain de sport, Campus Sud",
+    "category": "sport",
+    "description": "Tournoi annuel regroupant les équipes de football des écoles d'ingénieurs de la région. Venez supporter notre équipe ou participez aux activités organisées en marge du tournoi.",
+    "image": "/api/placeholder/500/300"
+  },
+  {
+    "id": 3,
+    "title": "Conférence sur l'Intelligence Artificielle",
+    "date": "2023-10-18",
+    "time": "15:00 - 17:30",
+    "location": "Salle de conférence B, Bâtiment Innovation",
+    "category": "académique",
+    "description": "Conférence animée par Dr. Ahmed Benali, expert en IA chez Google. Il abordera les dernières avancées en matière d'intelligence artificielle et leurs implications pour les futurs ingénieurs.",
+    "image": "/api/placeholder/500/300"
+  },
+  {
+    "id": 4,
+    "title": "Atelier CV et préparation aux entretiens",
+    "date": "2023-10-22",
+    "time": "10:00 - 12:00",
+    "location": "Salle 205, Bâtiment Principal",
+    "category": "carrière",
+    "description": "Atelier pratique pour vous aider à améliorer votre CV et vous préparer aux entretiens d'embauche. Organisé en partenariat avec le service des stages et de l'insertion professionnelle.",
+    "image": "/api/placeholder/500/300"
+  },
+  {
+    "id": 5,
+    "title": "Soirée d'intégration",
+    "date": "2023-10-25",
+    "time": "20:00 - 01:00",
+    "location": "Maison des Étudiants",
+    "category": "social",
+    "description": "Grande soirée d'intégration pour accueillir les nouveaux étudiants. Au programme : musique, jeux, et bien plus encore ! Entrée gratuite pour les étudiants avec carte d'étudiant.",
+    "image": "/api/placeholder/500/300"
+  },
+  {
+    "id": 6,
+    "title": "Hackathon Innovation Durable",
+    "date": "2023-11-04",
+    "time": "09:00 - 23:59",
+    "location": "FabLab, Campus Technologique",
+    "category": "académique",
+    "description": "48 heures pour concevoir et prototyper des solutions innovantes aux défis environnementaux actuels. Ouvert à tous les étudiants, débutants comme expérimentés.",
+    "image": "/api/placeholder/500/300"
+  },
+  {
+    "id": 7,
+    "title": "Séminaire sur l'entrepreneuriat",
+    "date": "2023-11-10",
+    "time": "13:30 - 16:30",
+    "location": "Amphithéâtre C, Bâtiment Business",
+    "category": "carrière",
+    "description": "Séminaire animé par des entrepreneurs à succès qui partageront leurs expériences et conseils pour lancer sa startup. Inscription préalable nécessaire.",
+    "image": "/api/placeholder/500/300"
+  }
+]
