@@ -65,6 +65,3 @@ Ce dépôt sert de base pour développer davantage le site de l'ADEI.  Voici que
 
 L'architecture en deux parties permet de faire évoluer séparément le front‑end et le back‑end en fonction des besoins.
 
-
-
-npm add framer-motion@latest --prefix client"# ADEI-Repo" 
