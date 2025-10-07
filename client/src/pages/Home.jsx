@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import { AuthContext } from '../AuthContext';
 
 const Home = () => {
-  const { token } = useContext(AuthContext);
+  const { token, isAdherent } = useContext(AuthContext);
   const [news, setNews] = useState([]);
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -151,9 +151,11 @@ const Home = () => {
                 <a href="/clubs" className="btn">
                   Découvrir nos clubs
                 </a>
-                <a href="/contact" className="btn secondary">
-                  Nous contacter
-                </a>
+                {isAdherent && (
+                  <a href="/feedback" className="btn secondary">
+                    Avis et Réclamations
+                  </a>
+                )}
               </div>
             </div>
           </section>

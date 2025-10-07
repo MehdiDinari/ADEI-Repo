@@ -10,10 +10,12 @@ import Clubs from './pages/Clubs';
 import ENSA from './pages/ENSA';
 import ADEI from './pages/ADEI';
 import ClubDetails from './pages/ClubDetails';
-import Contact from './pages/Contact';
+import Feedback from './pages/Feedback';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Messages from './pages/Messages';
+import AdminUsers from './pages/AdminUsers';
+import AdherentRoute from './AdherentRoute';
 import './styles/theme.css';
 
 function App() {
@@ -32,10 +34,15 @@ function App() {
               <Route path="/ensa" element={<ENSA />} />
               <Route path="/adei" element={<ADEI />} />
               <Route path="/club/:clubId" element={<ClubDetails />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/feedback" element={
+                <AdherentRoute>
+                  <Feedback />
+                </AdherentRoute>
+              } />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/messages" element={<Messages />} />
+              <Route path="/admin/users" element={<AdminUsers />} />
             </Routes>
           </main>
           <Footer />

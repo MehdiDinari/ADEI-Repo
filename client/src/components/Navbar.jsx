@@ -3,13 +3,13 @@ import { Link, useLocation } from 'react-router-dom';
 import { AuthContext } from '../AuthContext';
 
 const Navbar = () => {
-  const { token, logout, user } = useContext(AuthContext);
+  const { token, logout, user, isAdmin, isAdherent } = useContext(AuthContext);
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isAuthDropdownOpen, setIsAuthDropdownOpen] = useState(false);
 
-  const username = user?.username || (token ? 'Admin' : null);
+  const username = user?.username || 'Invité';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -88,7 +88,9 @@ const Navbar = () => {
           <Link to="/clubs" className={`navbar-link ${isActive('/clubs') ? 'active' : ''}`} onClick={() => setIsMobileMenuOpen(false)}>Clubs</Link>
           <Link to="/ensa" className={`navbar-link ${isActive('/ensa') ? 'active' : ''}`} onClick={() => setIsMobileMenuOpen(false)}>ENSA</Link>
           <Link to="/adei" className={`navbar-link ${isActive('/adei') ? 'active' : ''}`} onClick={() => setIsMobileMenuOpen(false)}>ADEI</Link>
-          <Link to="/contact" className={`navbar-link ${isActive('/contact') ? 'active' : ''}`} onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
+          {isAdherent && (
+            <Link to="/feedback" className={`navbar-link ${isActive('/feedback') ? 'active' : ''}`} onClick={() => setIsMobileMenuOpen(false)}>Avis et Réclamations</Link>
+          )}
         </div>
 
         {/* Auth Dropdown */}
@@ -104,13 +106,35 @@ const Navbar = () => {
             <div className={`auth-dropdown-menu ${isAuthDropdownOpen ? 'open' : ''}`}>
               {token ? (
                 <>
-                  <Link 
-                    to="/messages" 
-                    className="auth-dropdown-item"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Admin (messages)
-                  </Link>
+                  {isAdmin && (
+                    <>
+                      <Link 
+                        to="/messages" 
+                        className="auth-dropdown-item"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Avis et Réclamations
+                      </Link>
+                      <Link 
+                        to="/admin/users" 
+                        className="auth-dropdown-item"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Gestion des utilisateurs
+                      </Link>
+                    </>
+                  )}
+                  
+                  {isAdherent && (
+                    <Link 
+                      to="/adherent/profile" 
+                      className="auth-dropdown-item"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Mon profil
+                    </Link>
+                  )}
+                  
                   <button 
                     onClick={handleLogout} 
                     className="auth-dropdown-item"

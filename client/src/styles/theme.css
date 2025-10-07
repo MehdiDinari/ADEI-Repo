@@ -313,7 +313,7 @@ a:hover {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   margin: 0 var(--spacing-lg);
   width: auto;         /* let it expand naturally */
-  max-width: 800px;     /* remove the 600px limit */
+  max-width: 1000px;    /* increased to accommodate all links */
 }
 
 

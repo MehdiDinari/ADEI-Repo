@@ -6,6 +6,7 @@ const Register = () => {
   const { register } = useContext(AuthContext);
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
@@ -35,7 +36,7 @@ const Register = () => {
       return;
     }
     
-    const result = await register(username, password);
+    const result = await register(username, email, password);
     if (result.success) {
       navigate('/');
     } else {
@@ -90,6 +91,22 @@ const Register = () => {
                     minLength="3"
                   />
                   <small className="text-muted">Au moins 3 caractères</small>
+                </div>
+
+                <div className="form-group">
+                  <label className="form-label">
+                    Email
+                  </label>
+                  <input
+                    name="email"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="form-input"
+                    placeholder="Votre adresse email"
+                    required
+                  />
+                  <small className="text-muted">Adresse email valide</small>
                 </div>
 
                 <div className="form-group">
